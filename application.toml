@@ -2,5 +2,10 @@
 listen = "0.0.0.0:8080" # 监听地址
 
 [logger]
+# 日志级别 TRACE > DEBUG > INFO > WARN > ERROR
+# 默认最高日志级别为 INFO
+# 开启调试模式后, 默认最高日志级别为 DEBUG
+# INFO 级别及以下的日志将写入日志文件中, DEBUG 级别及以上的日志将输出到终端
+debug = true                     # 开启调试模式
 directory = "./logs"             # 日志文件目录
 file_name_prefix = "armoury.log" # 日志文件前缀
