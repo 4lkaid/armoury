@@ -1,0 +1,6 @@
+[general]
+listen = "0.0.0.0:8080" # 监听地址
+
+[logger]
+directory = "./logs"             # 日志文件目录
+file_name_prefix = "armoury.log" # 日志文件前缀
