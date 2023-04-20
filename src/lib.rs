@@ -6,9 +6,7 @@ mod error;
 mod route;
 mod service;
 
-pub async fn init() -> Result<WorkerGuard> {
-    let config = config::Config::load()?;
-    let worker_guard = config::logger::init(&config.logger)?;
-    config::general::init(&config.general).await?;
+pub async fn run() -> Result<WorkerGuard> {
+    let worker_guard = config::init().await?;
     Ok(worker_guard)
 }
